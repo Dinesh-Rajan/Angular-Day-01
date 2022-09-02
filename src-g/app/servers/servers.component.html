@@ -1,0 +1,14 @@
+
+<input type="text" [(ngModel)]="serverName"><br>
+<br>
+{{serverName}}
+<br>
+<br>
+
+<button type="reset" (click) ="onAddNewServer()">Add new Server</button>
+<p *ngIf = "serverCreated; else noServer">{{serverCreationMessage}}</p>
+<ng-template #noServer>
+    <p>{{serverCreationMessage}}</p>
+</ng-template>
+<app-server></app-server>
+<app-server></app-server>
